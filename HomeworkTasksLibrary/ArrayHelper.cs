@@ -135,9 +135,9 @@ namespace HomeworkTasksLibrary
             return numberOddElements;
         }
 
-        //+8.Swap the first and second half of the array, for example,
-        //for an array of 1 2 3 4,the result is 3 4 1 2,
-        //or for 1 2 3 4 5 -> 4 5 3 1 2.
+        /*+8.Swap the first and second half of the array, for example,
+        for an array of 1 2 3 4,the result is 3 4 1 2,
+        or for 1 2 3 4 5 -> 4 5 3 1 2.*/
         public static void SwapPlaceHalfArray(int[] array)
         {
             if (array == null)
@@ -158,8 +158,8 @@ namespace HomeworkTasksLibrary
             }
         }
 
-        //+9.Sort the array in ascending order in one of the ways:
-        //bubble (Bubble), selection (Select) or inserts (Insert))
+        /*+9.Sort the array in ascending order in one of the ways:
+        bubble (Bubble), selection (Select) or inserts (Insert))*/
         public static void SortArrayByBubble(int[] array)
         {
             if (array == null)
@@ -179,9 +179,9 @@ namespace HomeworkTasksLibrary
             }
         }
 
-        //10.Sort the array in descending order in one of the ways
-        //(different from the method in the 9th task):
-        //bubble (Bubble), selection (Select) or inserts (Insert))
+        /*10.Sort the array in descending order in one of the ways
+        (different from the method in the 9th task):
+        bubble (Bubble), selection (Select) or inserts (Insert))*/
         public static void SortArrayByInsert(int[] array)
         {
             if (array == null)

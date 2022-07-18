@@ -15,6 +15,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.FindMinElement(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -27,6 +28,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.FindMaxElement(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -39,6 +41,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.FindIndexMinElement(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -51,6 +54,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.FindIndexMaxElement(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -63,6 +67,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.CountSumElementsWithOddIndex(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -74,6 +79,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int[] expected)
         {
             ArrayHelper.MakeReverseArray(array);
+
             CollectionAssert.AreEqual(expected, array);
         }
 
@@ -86,6 +92,7 @@ namespace HomeworkTasksLibraryTests
             (int[] array, int expected)
         {
             int actual = ArrayHelper.CountNumberOddElements(array);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -97,6 +104,7 @@ namespace HomeworkTasksLibraryTests
            (int[] array, int[] expected)
         {
             ArrayHelper.SwapPlaceHalfArray(array);
+
             CollectionAssert.AreEqual(expected, array);
         }
 
@@ -108,6 +116,7 @@ namespace HomeworkTasksLibraryTests
            (int[] array, int[] expected)
         {
             ArrayHelper.SortArrayByBubble(array);
+
             CollectionAssert.AreEqual(expected, array);
         }
     }

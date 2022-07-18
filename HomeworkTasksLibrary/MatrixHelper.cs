@@ -4,10 +4,10 @@ namespace HomeworkTasksLibrary
 {
     public class MatrixHelper
     {
-        public static int[,] GanerateMatrix(int size1, int size2)
+        public static int[,] GanerateMatrix(int row, int colum)
         {
             Random random = new Random();
-            int[,] matrix = new int[size1, size2];
+            int[,] matrix = new int[row, colum];
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -31,6 +31,7 @@ namespace HomeworkTasksLibrary
         public static int FindMinElement(int[,] matrix)
         {
             (int indexIMinElement, int indexJMinElement) = FindIndexMinElement(matrix);
+
             return matrix[indexIMinElement, indexJMinElement];
         }
 
@@ -38,6 +39,7 @@ namespace HomeworkTasksLibrary
         public static int FindMaxElement(int[,] matrix)
         {
             (int indexIMaxElement, int indexJMaxElement) = FindIndexMaxElement(matrix);
+
             return matrix[indexIMaxElement, indexJMaxElement];
         }
 
@@ -61,6 +63,7 @@ namespace HomeworkTasksLibrary
                     }
                 }
             }
+
             return result;
         }
 
@@ -91,7 +94,6 @@ namespace HomeworkTasksLibrary
         //+5.Find the number of array elements that are greater than all their neighbors at the same time.
         public static int CountElementsGreaterNighbors(int[,] matrix)
         {
-
             if (matrix == null)
             {
                 throw new ArgumentException("Null matrix");
@@ -99,30 +101,32 @@ namespace HomeworkTasksLibrary
 
             int countElements = 0;
 
-            for (int row = 0; row < matrix.GetLength(0); row++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int colum = 0; colum < matrix.GetLength(1); colum++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    int countNeighborsElements = 0;
-                    for (int row1 = row - 1; row1 <= row + 1; row1++)
+                    int count = 0;
+
+                    for (int k = i - 1; k <= i + 1; k++)
                     {
-                        for (int colum1 = colum - 1; colum1 <= colum + 1; colum1++)
+                        for (int l = j - 1; l <= j + 1; l++)
                         {
-                            if (row1 < 0 || row1 == matrix.GetLength(0) || colum1 < 0 || colum1 == matrix.GetLength(1))
+                            if (k < 0 || k == matrix.GetLength(0) || l < 0 || l == matrix.GetLength(1))
                             {
                             }
                             else
                             {
-                                countNeighborsElements++;
-                                if (matrix[row, colum] > matrix[row1, colum1])
+                                count++;
+
+                                if (matrix[i, j] > matrix[k, l])
                                 {
-                                    countNeighborsElements--;
+                                    count--;
                                 }
                             }
                         }
                     }
 
-                    if (countNeighborsElements == 1)
+                    if (count == 1)
                     {
                         countElements++;
                     }
